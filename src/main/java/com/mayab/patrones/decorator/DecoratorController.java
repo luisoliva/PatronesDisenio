@@ -16,13 +16,20 @@ public class DecoratorController {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("creando e imprimiendo descripcion de una hamburguesa angus...");
         Burger instancia = new Angus();
-        System.out.println(instancia.getDescription() + " "+ instancia.getCost());
-        
+        System.out.println(instancia.getDescription() + " con costo base de  "+ instancia.getCost());
+
+        System.out.println("\ncreando una hamburguesa vegetariana...");
         Burger veg = new Veggie();
+        
+        System.out.println("costo parcial: " + veg.getCost() + "\nagregandole guacamole...");
         veg = new Guacamole(veg);
+        
+        System.out.println("costo parcial: " + veg.getCost() + "\nagregandole tocino...");
         veg = new Bacon(veg);
-        System.out.println(veg.getDescription() +" y su costo total es de " +veg.getCost());
+        System.out.println("costo parcial: " + veg.getCost() + "\nPedido finalizado");
+        System.out.println("\nCuenta de la hamburguesa: " + veg.getDescription() +" y su costo total es de " +veg.getCost());
 
         
     }

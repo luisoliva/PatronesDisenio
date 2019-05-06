@@ -27,6 +27,7 @@ public class ObserverController {
         mexico.addObserverToList(alberto);
         mexico.addObserverToList(luis);
         
+        System.out.println("cambio de estado del vuelo...");
         mexico.setEstado("retrasado");
         merida.setSala("A2");
     }     

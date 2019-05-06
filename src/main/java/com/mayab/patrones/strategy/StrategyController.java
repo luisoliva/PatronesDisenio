@@ -16,17 +16,19 @@ public class StrategyController {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ReporteCantidad cantidad = new ReporteCantidad();
-        cantidad.desplegarTransacciones();
-
+        ReporteFecha fecha = new ReporteFecha();
+        fecha.desplegarTransacciones();
+        
         ReporteCategoria categoria = new ReporteCategoria();
         categoria.desplegarTransacciones();
         
+        ReporteCantidad cantidad = new ReporteCantidad();
+        cantidad.desplegarTransacciones();
+
         ReporteComercio comercio =  new ReporteComercio();
         comercio.desplegarTransacciones();
         
-        ReporteFecha fecha = new ReporteFecha();
-        fecha.desplegarTransacciones();
+        
 
         
     }

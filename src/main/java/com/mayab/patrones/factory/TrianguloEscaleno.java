@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mayab.patrones.factoryMethod;
+package com.mayab.patrones.factory;
 
 /**
  *
  * @author luisoliva
  */
-public class TrianguloIsosceles extends Triangulo{
-       private String tipo = "isosceles";
+public class TrianguloEscaleno extends Triangulo{
+        public String tipo = "escaleno";
 
 }

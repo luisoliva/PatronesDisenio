@@ -16,13 +16,21 @@ public class TemplateController {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("actualizando persona");
+        System.out.println("actualizando persona con datos invalidos");
         Persona p=new Persona("Luis", "Merida", 20);        
         p.actualizar(17);
          
-        System.out.println("\nactualizando producto");
+        System.out.println("\nactualizando producto con datos invalidos");
         Producto pp=new Producto("123", 11);
         pp.actualizar(9);
+        
+        System.out.println("\nactualizando persona con datos validos");
+        Persona pv=new Persona("Luis", "Merida", 20);        
+        pv.actualizar(19);
+         
+        System.out.println("\nactualizando producto con datos validos");
+        Producto ppv=new Producto("123", 11);
+        ppv.actualizar(11);
     }
     
 }

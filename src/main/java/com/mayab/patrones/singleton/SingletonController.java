@@ -16,14 +16,15 @@ public class SingletonController {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        System.out.println("creacion de una instancia de singleton");
         Usuario user = Usuario.getInstance("Luis","Oliva");
-        System.out.println(user.getName());
-        System.out.println(user.getStatus());
+        System.out.println("nombre: "  + user.getName());
+        System.out.println("logeado: " + user.getStatus());
         
+        System.out.println("\ncreacion de una nueva instancia de singleton con datos distintos y logeada");
         Usuario user2 = Usuario.getInstance("Pepe","perez");
-        System.out.println(user2.getName());
+        System.out.println("nombre: " + user2.getName());
         user2.logIn();
-        System.out.println(user.getStatus());
+        System.out.println("logeado: " + user.getStatus());
     }   
 }

@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mayab.patrones.factoryMethod;
+package com.mayab.patrones.factory;
 
 /**
  *
  * @author luisoliva
  */
-public class TrianguloEscalenoCreator extends TrianguloCreator{
+public class TrianguloEquilateroCreator  extends TrianguloCreator{
     @Override
     Triangulo factoryMethod(String tipo) {
-        if (tipo.equals("escaleno")){
-            return new TrianguloEscaleno();
+        if (tipo.equals("equilatero")){
+            return new TrianguloEquilatero();
         }else{
             return null;
         }
+        
     }
-    
 }
