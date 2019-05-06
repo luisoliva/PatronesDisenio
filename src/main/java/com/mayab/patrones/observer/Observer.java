@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mayab.patrones.adapter;
+package com.mayab.patrones.observer;
 
 /**
  *
  * @author luisoliva
  */
-public interface YoungPerson{
-    public String getFullName();
-    public int getAge();
-    public void setFullName(String fullname);
-    public void setAge(int age);
-    
+public interface Observer {
+    public void update();
 }

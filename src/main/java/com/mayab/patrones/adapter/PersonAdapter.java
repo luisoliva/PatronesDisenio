@@ -19,16 +19,15 @@ public class PersonAdapter implements OldPerson {
     
     @Override
     public String getName() {
-        String cadena=this.adaptada.getName();
+        String cadena=this.adaptada.getFullName();
         String[] parts = cadena.split(" ");
         String part1 = parts[0];
-        
         return part1;
     }
 
     @Override
     public String getLastName() {
-        String cadena=this.adaptada.getName();
+        String cadena=this.adaptada.getFullName();
         String[] parts = cadena.split(" ");
         String part2 = parts[1];
         
@@ -36,30 +35,27 @@ public class PersonAdapter implements OldPerson {
     }
 
     @Override
-    public String getBirthDate() {
-        Integer cadena=this.adaptada.getAge();
-        
-        return cadena.toString();    
+    public String getBirthday() {
+        Integer edad=2019 - this.adaptada.getAge();
+        String fecha = "17 de marzo de ";
+        return fecha + edad.toString();    
     }
 
     @Override
     public void setName(String name) {
-        String cadena=name;
-        String[] parts = cadena.split(" ");
-        String part1 = parts[1];
-        this.adaptada.setName(name + " " + part1);
+        this.adaptada.setFullName(name);
     }
 
     @Override
     public void setLastName(String lastName) {
-        String cadena=lastName;
-        String[] parts = cadena.split(" ");
-        String part2 = parts[1];
-        this.adaptada.setName(part2);   
+        this.adaptada.setFullName(this.adaptada.getFullName() + lastName);   
     }
 
     @Override
-    public void setBirthDate(String birthDate) {
+    public void setBirthday(String birthday) {
+        String lastFourDigits = birthday.substring(birthday.length() - 4);
+        int año = Integer.parseInt(lastFourDigits);
+        this.adaptada.setAge(2019-año);
     }
     
 }

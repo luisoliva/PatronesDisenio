@@ -12,8 +12,8 @@ package com.mayab.patrones.adapter;
 public interface OldPerson {
     public String getName();
     public String getLastName();
-    public String getBirthDate();	
+    public String getBirthday();	
     public void setName(String name);
     public void setLastName(String lastName);
-    public void setBirthDate(String birthDate);
+    public void setBirthday(String birthDate);
 }
