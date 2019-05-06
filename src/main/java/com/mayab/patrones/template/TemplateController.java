@@ -19,8 +19,7 @@ public class TemplateController {
         System.out.println("actualizando persona");
         Persona p=new Persona("Luis", "Merida", 20);        
         p.actualizar(17);
-        
-        
+         
         System.out.println("\nactualizando producto");
         Producto pp=new Producto("123", 11);
         pp.actualizar(9);
