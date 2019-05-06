@@ -12,8 +12,9 @@ package com.mayab.patrones.strategy;
 public abstract class Reporte {
     Sortable sortBehavior;
     
-    public abstract void setSortBehavior();
-    public void desplegarTransacciones(){
-        
-    };
+    public void setSortBehavior(Sortable s){
+        this.sortBehavior = s;
+    }
+    
+    public abstract void desplegarTransacciones();
 }

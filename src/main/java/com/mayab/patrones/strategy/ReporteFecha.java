@@ -11,10 +11,14 @@ package com.mayab.patrones.strategy;
  */
 public class ReporteFecha extends Reporte{
 
-    @Override
-    public void setSortBehavior() {
+    public ReporteFecha(){
         this.sortBehavior = new SortFecha();
     }
 
+    @Override
+    public void desplegarTransacciones() {
+        this.sortBehavior.sort();
+    }
+    
     
 }

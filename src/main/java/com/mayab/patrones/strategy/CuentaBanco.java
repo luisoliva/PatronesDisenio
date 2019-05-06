@@ -12,9 +12,20 @@ import java.util.ArrayList;
  */
 public class CuentaBanco {
     ArrayList<Transaccion> transacciones;
-    Reporte reporte;
+    public double estadoDeCuenta;
     
     public CuentaBanco(){
         this.transacciones=new ArrayList<Transaccion>();
+        this.estadoDeCuenta = 0;
+    }
+    
+    public void agregarTransaccion(Transaccion t){
+        this.transacciones.add(t);
+        this.estadoDeCuenta = this.estadoDeCuenta + t.cantidad;
+    }
+    
+    public void eliminarTransaccion(Transaccion t){
+        this.transacciones.remove(t);
+        this.estadoDeCuenta = this.estadoDeCuenta - t.cantidad;
     }
 }

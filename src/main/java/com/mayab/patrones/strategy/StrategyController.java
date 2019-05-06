@@ -16,8 +16,18 @@ public class StrategyController {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        CuentaBanco cuenta=new CuentaBanco();
-        cuenta.transacciones.add(new Transaccion("02/12/2018", "Veterinaria", 20345, "Salud"));
+        ReporteCantidad cantidad = new ReporteCantidad();
+        cantidad.desplegarTransacciones();
+
+        ReporteCategoria categoria = new ReporteCategoria();
+        categoria.desplegarTransacciones();
+        
+        ReporteComercio comercio =  new ReporteComercio();
+        comercio.desplegarTransacciones();
+        
+        ReporteFecha fecha = new ReporteFecha();
+        fecha.desplegarTransacciones();
+
         
     }
     

@@ -11,10 +11,16 @@ package com.mayab.patrones.strategy;
  */
 public class ReporteComercio extends Reporte{
 
-    @Override
-    public void setSortBehavior() {
-        this.sortBehavior=new SortComercio();
+    public ReporteComercio(){
+        this.sortBehavior = new SortComercio();
     }
+    
+    @Override
+    public void desplegarTransacciones() {
+        this.sortBehavior.sort();
+    }
+
+   
 
     
 }
